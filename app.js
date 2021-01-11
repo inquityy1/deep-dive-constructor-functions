@@ -1,8 +1,15 @@
-/*class Person {
+class AgedPerson {
+	printAge() {
+		console.log(this.age);
+	}
+}
+
+class Person extends AgedPerson {
 	name = 'Max';
 
 
 	constructor() {
+		super();
 		this.age = 30;
 	}
 
@@ -12,17 +19,27 @@
 		);
 	}
 }
-*/
+/*
 function Person() {
-	this.age = 30;
 	this.name = 'Max';
 	this.greet = function() {
+	this.age = 30;
 		console.log(
 			'Hi, I am ' + this.name + ' and I am' + this.age + ' years old'
 		);
-	}
+	};
 }
 
-const person = new Person();
-person.greet();
+Person.prototype = {
+	printAge() {
+		console.log(this.age);
+	}
+};
+*/
 
+console.dir(Person);
+
+const p = new Person();
+p.greet();
+p.printAge();
+console.log(p.__proto__);
