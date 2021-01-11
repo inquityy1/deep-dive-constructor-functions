@@ -54,4 +54,4 @@ p.printAge();
 console.log(p.length);
 console.log(p.toString());
 const p2 = new p.__proto__.constructor();
-console.dir(Object.prototype);
+console.dir(Object.prototype.__proto__);
