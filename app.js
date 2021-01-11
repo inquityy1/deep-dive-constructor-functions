@@ -1,4 +1,8 @@
-/*class AgedPerson {
+class AgedPerson {
+	constructor() {
+		console.log(this.name);
+	}
+	
 	printAge() {
 		console.log(this.age);
 	}
@@ -19,7 +23,7 @@ class Person extends AgedPerson {
 		);
 	}
 }
-*/
+/*
 function Person() {
 	this.name = 'Max';
 	this.greet = function() {
@@ -34,11 +38,11 @@ Person.describe = function() {
 	console.log('Creating persons...');
 }
 
-/*Person.prototype = {
+Person.prototype = {
 	printAge() {
 		console.log(this.age);
 	}
-};*/
+};
 
 Person.prototype.printAge = function() {
 	console.log(this.age);
@@ -55,3 +59,7 @@ console.log(p.length);
 console.log(p.toString());
 const p2 = new p.__proto__.constructor();
 console.dir(Object.prototype.__proto__);
+*/
+
+const p = new Person();
+console.log(p);
