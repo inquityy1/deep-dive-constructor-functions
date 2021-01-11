@@ -1,8 +1,4 @@
-class AgedPerson {
-	constructor() {
-		console.log(this.name);
-	}
-	
+class AgedPerson {	
 	printAge() {
 		console.log(this.age);
 	}
@@ -63,3 +59,6 @@ console.dir(Object.prototype.__proto__);
 
 const p = new Person();
 console.log(p);
+
+const p2 = new Person();
+console.log(p.__proto__ === p2.__proto__);
